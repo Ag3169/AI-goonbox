@@ -214,7 +214,7 @@ CURRENT_THEME = "Dark Mode"
 # Active color scheme (loaded from THEMES based on CURRENT_THEME)
 COLORS = THEMES.get(CURRENT_THEME, THEMES["Dark Mode"]).copy()
 
-WELCOME_MESSAGE = "Welcome to AI-goonbox. Ask anything to get started."
+WELCOME_MESSAGE = "Welcome to Goonbox-AI. Ask anything to get started."
 AGENT_WELCOME_MESSAGE = "AI coding agent ready. Describe what you want to build."
 
 IDE_PYTHON_TEMPLATE = """"""
@@ -496,7 +496,7 @@ class GroqChatroomApp(tk.Tk):
     def __init__(self) -> None:
         """Initialize app state, restore persisted data, and build the UI."""
         super().__init__()
-        self.title("AI-goonbox")
+        self.title("Goonbox-AI")
         self.geometry("1300x820")
         self.minsize(980, 700)
         self.configure(bg=COLORS["bg"])
@@ -692,7 +692,7 @@ class GroqChatroomApp(tk.Tk):
         ).pack(side="left")
         tk.Label(
             top_left,
-            text=" AI-goonbox",
+            text=" Goonbox-AI",
             fg=COLORS["text"],
             bg=COLORS["panel"],
             font=("Segoe UI", 14, "bold"),
