@@ -92,50 +92,56 @@ IGNORED_DIRS = {".venv", ".git", "__pycache__", ".idea", ".pytest_cache"}
 # ===== THEME DEFINITIONS =====
 THEMES = {
     "Dark Mode": {
-        "bg": "#1e1e1e",
-        "panel": "#252526",
-        "sidebar": "#2d2d30",
-        "border": "#3e3e42",
-        "text": "#d4d4d4",
-        "muted": "#858585",
-        "assistant_bubble": "#2d2d30",
-        "user_bubble": "#3a3d41",
-        "system_bubble": "#2a2d2e",
-        "button": "#0e7490",
-        "button_hover": "#0891b2",
-        "entry_bg": "#1e1e1e",
-        "list_bg": "#252526",
-        "syntax_keyword": "#569cd6",
-        "syntax_builtin": "#4ec9b0",
-        "syntax_string": "#ce9178",
-        "syntax_comment": "#6a9955",
-        "syntax_number": "#b5cea8",
-        "syntax_function": "#dcdcaa",
-        "syntax_class": "#4ec9b0",
-        "syntax_decorator": "#c586c0",
+        "bg": "#0f0f0f",
+        "panel": "#1a1a1a",
+        "sidebar": "#121212",
+        "border": "#2d2d2d",
+        "text": "#e0e0e0",
+        "muted": "#9e9e9e",
+        "assistant_bubble": "#1a1a1a",
+        "user_bubble": "#252525",
+        "system_bubble": "#1f1f1f",
+        "assistant_bubble_border": "#2d2d2d",
+        "user_bubble_border": "#3a3a3a",
+        "system_bubble_border": "#2d2d2d",
+        "button": "#4f46e5",
+        "button_hover": "#6366f1",
+        "entry_bg": "#1a1a1a",
+        "list_bg": "#1a1a1a",
+        "syntax_keyword": "#7c3aed",
+        "syntax_builtin": "#8b5cf6",
+        "syntax_string": "#ec4899",
+        "syntax_comment": "#6b7280",
+        "syntax_number": "#0ea5e9",
+        "syntax_function": "#f59e0b",
+        "syntax_class": "#8b5cf6",
+        "syntax_decorator": "#ec4899",
     },
     "Dark Blue": {
-        "bg": "#090d14",
-        "panel": "#0f1623",
-        "sidebar": "#111b2b",
-        "border": "#263245",
-        "text": "#e8edf5",
-        "muted": "#9aa9be",
-        "assistant_bubble": "#131d2c",
-        "user_bubble": "#18354a",
-        "system_bubble": "#162334",
-        "button": "#22b3a5",
-        "button_hover": "#178779",
-        "entry_bg": "#0f1726",
-        "list_bg": "#0f1726",
-        "syntax_keyword": "#78a9ff",
-        "syntax_builtin": "#6cc8ff",
-        "syntax_string": "#8ed68f",
-        "syntax_comment": "#6c7787",
-        "syntax_number": "#f5be7a",
-        "syntax_function": "#ffd479",
-        "syntax_class": "#c9a6ff",
-        "syntax_decorator": "#ff8ab5",
+        "bg": "#0a0a1a",
+        "panel": "#101025",
+        "sidebar": "#0d0d20",
+        "border": "#252540",
+        "text": "#e6e6ff",
+        "muted": "#a0a0c0",
+        "assistant_bubble": "#101025",
+        "user_bubble": "#1a1a3a",
+        "system_bubble": "#151530",
+        "assistant_bubble_border": "#252540",
+        "user_bubble_border": "#303050",
+        "system_bubble_border": "#252540",
+        "button": "#3b82f6",
+        "button_hover": "#60a5fa",
+        "entry_bg": "#101025",
+        "list_bg": "#101025",
+        "syntax_keyword": "#60a5fa",
+        "syntax_builtin": "#93c5fd",
+        "syntax_string": "#f87171",
+        "syntax_comment": "#9ca3af",
+        "syntax_number": "#a7f3d0",
+        "syntax_function": "#fbbf24",
+        "syntax_class": "#c7d2fe",
+        "syntax_decorator": "#fda4af",
     },
     "GitHub Dark": {
         "bg": "#0d1117",
@@ -147,6 +153,9 @@ THEMES = {
         "assistant_bubble": "#161b22",
         "user_bubble": "#21262d",
         "system_bubble": "#1c2128",
+        "assistant_bubble_border": "#30363d",
+        "user_bubble_border": "#3d444d",
+        "system_bubble_border": "#30363d",
         "button": "#238636",
         "button_hover": "#2ea043",
         "entry_bg": "#0d1117",
@@ -170,6 +179,9 @@ THEMES = {
         "assistant_bubble": "#343746",
         "user_bubble": "#44475a",
         "system_bubble": "#383a59",
+        "assistant_bubble_border": "#6272a4",
+        "user_bubble_border": "#7a7fab",
+        "system_bubble_border": "#6272a4",
         "button": "#50fa7b",
         "button_hover": "#5af78e",
         "entry_bg": "#282a36",
@@ -193,6 +205,9 @@ THEMES = {
         "assistant_bubble": "#3e3d32",
         "user_bubble": "#49483e",
         "system_bubble": "#3c3b2f",
+        "assistant_bubble_border": "#75715e",
+        "user_bubble_border": "#8d8875",
+        "system_bubble_border": "#75715e",
         "button": "#a6e22e",
         "button_hover": "#b8ef41",
         "entry_bg": "#272822",
@@ -241,9 +256,10 @@ CAPABILITIES - WEB DEVELOPMENT:
 
 ACTIONS TO TAKE:
 • WRITE code directly into the editor using fenced code blocks (```python, ```html, ```css, ```javascript)
-• READ existing code to analyze and improve it
+• READ existing code in the editor to analyze and improve it
 • CREATE new functions, classes, modules, or web components as needed
 • FIX bugs by analyzing error messages and logic
+• NOTE: You cannot create or modify files directly - only update editor content
 
 OUTPUT FORMAT:
 • Return code in appropriate fenced blocks - it will be loaded into the editor
@@ -251,6 +267,7 @@ OUTPUT FORMAT:
 • Show only the code to generate, not the entire file
 • Keep code concise and focused on the task
 • Use ```python for Python code, ```html for HTML, ```css for CSS, ```javascript for JS
+• Note: You cannot create or modify files directly - only update editor content
 
 DEBUGGING HELP:
 • Ask for error messages or unexpected behavior
@@ -308,15 +325,17 @@ CAPABILITIES:
 
 ACTIONS TO TAKE:
 • WRITE code directly into the editor using fenced code blocks
-• READ existing HTML/CSS/JS to analyze and improve
+• READ existing HTML/CSS/JS in the editor to analyze and improve
 • CREATE responsive layouts and components
 • FIX bugs in styling, logic, or interactions
+• NOTE: You cannot create or modify files directly - only update editor content
 
 OUTPUT FORMAT:
 • Return code in appropriate fenced blocks (```html, ```css, ```javascript)
 • Include brief explanations before code blocks
 • Show complete, working code snippets
 • Keep code modern and use ES6+ where appropriate
+• Note: You cannot create or modify files directly - only update editor content
 
 DEBUGGING HELP:
 • Identify CSS layout issues and suggest fixes
@@ -659,6 +678,15 @@ class GroqChatroomApp(tk.Tk):
         self._save_conversations()
         self.destroy()
 
+    def _get_active_bg_color(self):
+        """Get the appropriate active background color based on current theme."""
+        if CURRENT_THEME == "Light Mode":
+            # For light mode, use a subtle gray for active state
+            return COLORS["muted"]  # Use muted color for a subtle effect
+        else:
+            # For dark modes, use a darker version of the entry background
+            return "#172135"  # Original dark color for dark themes
+
     def _build_ui(self) -> None:
         """Build the main application layout and compose all mode panes."""
         app_font = tkfont.nametofont("TkDefaultFont")
@@ -679,7 +707,7 @@ class GroqChatroomApp(tk.Tk):
             highlightthickness=1,
             highlightbackground=COLORS["border"],
         )
-        top_bar.pack(fill="x")
+        top_bar.pack(fill="x", pady=(0, 1))
 
         top_left = tk.Frame(top_bar, bg=COLORS["panel"])
         top_left.pack(side="left", padx=14, pady=10)
@@ -705,7 +733,12 @@ class GroqChatroomApp(tk.Tk):
             top_center,
             text="Chatroom Mode",
             command=lambda: self.switch_mode("chat"),
+            bg=COLORS["entry_bg"],
+            fg=COLORS["text"],
+            activebackground=self._get_active_bg_color(),
+            activeforeground=COLORS["text"],
             bd=0,
+            highlightthickness=0,
             padx=14,
             pady=8,
             font=("Segoe UI", 10, "bold"),
@@ -717,7 +750,12 @@ class GroqChatroomApp(tk.Tk):
             top_center,
             text="IDE Mode",
             command=lambda: self.switch_mode("ide"),
+            bg=COLORS["entry_bg"],
+            fg=COLORS["text"],
+            activebackground=self._get_active_bg_color(),
+            activeforeground=COLORS["text"],
             bd=0,
+            highlightthickness=0,
             padx=14,
             pady=8,
             font=("Segoe UI", 10, "bold"),
@@ -727,71 +765,67 @@ class GroqChatroomApp(tk.Tk):
 
         top_right = tk.Frame(top_bar, bg=COLORS["panel"])
         top_right.pack(side="right", padx=14, pady=10)
-        
+
         tk.Button(
             top_right,
             text="?",
             command=self.open_keyboard_shortcuts,
             bg=COLORS["entry_bg"],
             fg=COLORS["text"],
-            activebackground="#172135",
+            activebackground=self._get_active_bg_color(),
             activeforeground=COLORS["text"],
             bd=0,
-            highlightthickness=1,
-            highlightbackground=COLORS["border"],
+            highlightthickness=0,
             padx=8,
             pady=8,
             font=("Segoe UI", 10, "bold"),
             cursor="hand2",
         ).pack(side="right", padx=(0, 8))
-        
+
         self.search_button = tk.Button(
             top_right,
             text="Search",
             command=self.open_search_dialog,
             bg=COLORS["entry_bg"],
             fg=COLORS["text"],
-            activebackground="#172135",
+            activebackground=self._get_active_bg_color(),
             activeforeground=COLORS["text"],
             bd=0,
-            highlightthickness=1,
-            highlightbackground=COLORS["border"],
+            highlightthickness=0,
             padx=10,
             pady=8,
             font=("Segoe UI", 10, "bold"),
             cursor="hand2",
         )
         self.search_button.pack(side="right", padx=(0, 8))
-        
+
         self.export_button = tk.Button(
             top_right,
             text="Export",
             command=self.open_export_dialog,
             bg=COLORS["entry_bg"],
             fg=COLORS["text"],
-            activebackground="#172135",
+            activebackground=self._get_active_bg_color(),
             activeforeground=COLORS["text"],
             bd=0,
-            highlightthickness=1,
-            highlightbackground=COLORS["border"],
+            highlightthickness=0,
             padx=10,
             pady=8,
             font=("Segoe UI", 10, "bold"),
             cursor="hand2",
         )
         self.export_button.pack(side="right", padx=(0, 8))
-        
+
         self.settings_button = tk.Button(
             top_right,
             text="Settings",
             command=self.open_settings_dialog,
             bg=COLORS["entry_bg"],
             fg=COLORS["text"],
-            activebackground="#172135",
+            activebackground=self._get_active_bg_color(),
             activeforeground=COLORS["text"],
             bd=0,
-            highlightthickness=1,
-            highlightbackground=COLORS["border"],
+            highlightthickness=0,
             padx=12,
             pady=8,
             font=("Segoe UI", 10, "bold"),
@@ -812,16 +846,31 @@ class GroqChatroomApp(tk.Tk):
         self.left_sidebar_stack.pack(side="left", fill="y")
         self.left_sidebar_stack.pack_propagate(False)
 
-        self.right_view_stack = tk.Frame(body, bg=COLORS["panel"])
-        self.right_view_stack.pack(side="left", fill="both", expand=True)
+        self.right_view_stack = tk.Frame(
+            body, 
+            bg=COLORS["panel"],
+            highlightthickness=1,
+            highlightbackground=COLORS["border"]
+        )
+        self.right_view_stack.pack(side="left", fill="both", expand=True, padx=(1, 0))
 
         self.chat_sidebar = tk.Frame(self.left_sidebar_stack, bg=COLORS["sidebar"])
         self.file_sidebar = tk.Frame(self.left_sidebar_stack, bg=COLORS["sidebar"])
         self.chat_sidebar.place(relx=0, rely=0, relwidth=1, relheight=1)
         self.file_sidebar.place(relx=0, rely=0, relwidth=1, relheight=1)
 
-        self.chat_view = tk.Frame(self.right_view_stack, bg=COLORS["panel"])
-        self.ide_view = tk.Frame(self.right_view_stack, bg=COLORS["panel"])
+        self.chat_view = tk.Frame(
+            self.right_view_stack, 
+            bg=COLORS["panel"],
+            highlightthickness=1,
+            highlightbackground=COLORS["border"]
+        )
+        self.ide_view = tk.Frame(
+            self.right_view_stack, 
+            bg=COLORS["panel"],
+            highlightthickness=1,
+            highlightbackground=COLORS["border"]
+        )
         self.chat_view.place(relx=0, rely=0, relwidth=1, relheight=1)
         self.ide_view.place(relx=0, rely=0, relwidth=1, relheight=1)
 
@@ -839,25 +888,332 @@ class GroqChatroomApp(tk.Tk):
         except tk.TclError:
             pass
 
-        style.configure(
-            "Dark.TCombobox",
-            fieldbackground=COLORS["entry_bg"],
-            background=COLORS["entry_bg"],
-            foreground=COLORS["text"],
-            arrowcolor=COLORS["text"],
-            bordercolor=COLORS["border"],
-            lightcolor=COLORS["border"],
-            darkcolor=COLORS["border"],
-            padding=5,
-        )
-        style.map(
-            "Dark.TCombobox",
-            fieldbackground=[("readonly", COLORS["entry_bg"])],
-            selectbackground=[("readonly", COLORS["entry_bg"])],
-            selectforeground=[("readonly", COLORS["text"])],
-            foreground=[("readonly", COLORS["text"])],
-            background=[("readonly", COLORS["entry_bg"])],
-        )
+        # Configure styles based on current theme
+        if CURRENT_THEME == "Light Mode":
+            style.configure(
+                "Dark.TCombobox",  # Keep the same name for backward compatibility
+                fieldbackground=COLORS["entry_bg"],
+                background=COLORS["entry_bg"],
+                foreground=COLORS["text"],
+                arrowcolor=COLORS["text"],
+                bordercolor=COLORS["border"],
+                lightcolor=COLORS["border"],
+                darkcolor=COLORS["border"],
+                padding=5,
+            )
+            style.map(
+                "Dark.TCombobox",
+                fieldbackground=[("readonly", COLORS["entry_bg"])],
+                selectbackground=[("readonly", COLORS["entry_bg"])],
+                selectforeground=[("readonly", COLORS["text"])],
+                foreground=[("readonly", COLORS["text"])],
+                background=[("readonly", COLORS["entry_bg"])],
+            )
+            # Also configure the light theme
+            style.configure(
+                "Light.TCombobox",
+                fieldbackground=COLORS["entry_bg"],
+                background=COLORS["entry_bg"],
+                foreground=COLORS["text"],
+                arrowcolor=COLORS["text"],
+                bordercolor=COLORS["border"],
+                lightcolor=COLORS["border"],
+                darkcolor=COLORS["border"],
+                padding=5,
+            )
+            style.map(
+                "Light.TCombobox",
+                fieldbackground=[("readonly", COLORS["entry_bg"])],
+                selectbackground=[("readonly", COLORS["entry_bg"])],
+                selectforeground=[("readonly", COLORS["text"])],
+                foreground=[("readonly", COLORS["text"])],
+                background=[("readonly", COLORS["entry_bg"])],
+            )
+        else:
+            style.configure(
+                "Dark.TCombobox",
+                fieldbackground=COLORS["entry_bg"],
+                background=COLORS["entry_bg"],
+                foreground=COLORS["text"],
+                arrowcolor=COLORS["text"],
+                bordercolor=COLORS["border"],
+                lightcolor=COLORS["border"],
+                darkcolor=COLORS["border"],
+                padding=5,
+            )
+            style.map(
+                "Dark.TCombobox",
+                fieldbackground=[("readonly", COLORS["entry_bg"])],
+                selectbackground=[("readonly", COLORS["entry_bg"])],
+                selectforeground=[("readonly", COLORS["text"])],
+                foreground=[("readonly", COLORS["text"])],
+                background=[("readonly", COLORS["entry_bg"])],
+            )
+
+    def _update_theme_for_widget(self, widget):
+        """Recursively update theme colors for a widget and all its children."""
+        try:
+            # Update widget based on its type
+            if isinstance(widget, tk.Text):
+                widget.config(
+                    bg=COLORS["entry_bg"],
+                    fg=COLORS["text"],
+                    insertbackground=COLORS["text"],
+                    selectbackground=COLORS["button"],
+                    selectforeground=COLORS["text"],
+                    highlightbackground=COLORS["border"],
+                    highlightcolor=COLORS["border"]
+                )
+            elif isinstance(widget, tk.Entry):
+                widget.config(
+                    bg=COLORS["entry_bg"],
+                    fg=COLORS["text"],
+                    insertbackground=COLORS["text"],
+                    highlightbackground=COLORS["border"],
+                    highlightcolor=COLORS["border"],
+                    selectbackground=COLORS["button"],
+                    selectforeground=COLORS["text"]
+                )
+            elif isinstance(widget, tk.Listbox):
+                widget.config(
+                    bg=COLORS["list_bg"],
+                    fg=COLORS["text"],
+                    selectbackground=COLORS["button"],
+                    selectforeground=COLORS["text"],
+                    highlightbackground=COLORS["border"],
+                    highlightcolor=COLORS["border"]
+                )
+            elif isinstance(widget, tk.Label):
+                # Preserve original background color type (panel, sidebar, bg) but update to new theme equivalent
+                current_bg = widget.cget("bg")
+                if current_bg == "#1e1e1e" or current_bg == THEMES.get("Dark Mode", {}).get("bg", "#1e1e1e"):
+                    new_bg = COLORS["bg"]
+                elif current_bg == "#252526" or current_bg == THEMES.get("Dark Mode", {}).get("panel", "#252526"):
+                    new_bg = COLORS["panel"]
+                elif current_bg == "#2d2d30" or current_bg == THEMES.get("Dark Mode", {}).get("sidebar", "#2d2d30"):
+                    new_bg = COLORS["sidebar"]
+                else:
+                    # For other backgrounds, try to determine context by parent or siblings
+                    parent = widget.master
+                    if hasattr(parent, 'winfo_children'):
+                        siblings = parent.winfo_children()
+                        # If parent has listboxes or similar sidebar elements, it might be in sidebar
+                        if any(isinstance(sib, (tk.Listbox, tk.Scrollbar)) for sib in siblings):
+                            new_bg = COLORS["sidebar"]
+                        else:
+                            new_bg = COLORS["panel"]
+                    else:
+                        new_bg = COLORS["panel"]
+                
+                widget.config(
+                    bg=new_bg,
+                    fg=COLORS["text"]
+                )
+            elif isinstance(widget, tk.Button):
+                # Determine if this is a special button (like Save, Settings) vs regular buttons
+                btn_text = str(widget.cget("text")).lower()
+                if "save" in btn_text or "settings" in btn_text or "export" in btn_text or "search" in btn_text or "new" in btn_text:
+                    # Primary action buttons (like Duck.ai's main action buttons)
+                    bg_color = COLORS["button"]
+                    fg_color = "#ffffff"  # White text for contrast
+                    active_bg = COLORS["button_hover"]
+                elif "send" in btn_text or "run" in btn_text:
+                    # Send/run buttons - make them more subtle like Duck.ai
+                    bg_color = COLORS["button"]
+                    fg_color = "#ffffff"
+                    active_bg = COLORS["button_hover"]
+                else:
+                    # Regular buttons - make them more subtle like Duck.ai's interface
+                    bg_color = COLORS["entry_bg"]
+                    fg_color = COLORS["text"]
+                    active_bg = COLORS["panel"]  # Use panel color for subtle hover
+
+                # Forcefully reset and set all button properties to eliminate any visual artifacts
+                widget.config(
+                    bg=bg_color,
+                    fg=fg_color,
+                    activebackground=active_bg,
+                    activeforeground=COLORS["text"],
+                    disabledforeground=COLORS["muted"],
+                    selectcolor=bg_color,  # For check/radio buttons
+                    relief="flat",  # Flat appearance like Duck.ai
+                    bd=0,  # No border for cleaner look
+                    highlightbackground=bg_color,  # Match background to eliminate dark patches
+                    highlightcolor=bg_color,      # Match background to eliminate dark patches
+                    highlightthickness=0,  # No extra highlight
+                    overrelief="flat",  # No relief on hover
+                    takefocus=0,  # Don't show focus indicator
+                    insertwidth=0,  # No insertion cursor
+                    insertborderwidth=0,  # No insertion border
+                    selectborderwidth=0,  # No selection border
+                    selectbackground=bg_color,  # Match background
+                    selectforeground=fg_color,  # Match text color
+                    offrelief="flat",  # No relief when off (for checkbuttons)
+                    disabledbackground=COLORS["entry_bg"],  # Consistent disabled state
+                )
+            elif isinstance(widget, tk.Frame):
+                # Determine frame background based on context
+                current_bg = widget.cget("bg")
+                # Check if this is a known frame type by checking its children or parent
+                parent = widget.master
+                
+                # Default to panel color
+                bg_color = COLORS["panel"]
+                
+                # Check if this frame contains typical sidebar elements
+                for child in widget.winfo_children():
+                    if isinstance(child, tk.Listbox) or "explorer" in str(child) or "sidebar" in str(child):
+                        bg_color = COLORS["sidebar"]
+                        break
+                    elif isinstance(child, tk.Text) or "message" in str(child) or "chat" in str(child):
+                        # Likely part of main chat area
+                        bg_color = COLORS["panel"]
+                        break
+                    # Check if this is a bubble border frame (has specific border color)
+                    elif child.cget("bg") in [COLORS.get("assistant_bubble_border", "#e5e5e7"),
+                                              COLORS.get("user_bubble_border", "#d0ddf0"),
+                                              COLORS.get("system_bubble_border", "#e5e5e7")]:
+                        # Preserve the border color for bubble frames
+                        bg_color = current_bg
+                        break
+
+                # Special frames that should always be panel or sidebar
+                parent_str = str(parent) if parent else ""
+                if "sidebar" in parent_str or "explorer" in parent_str:
+                    bg_color = COLORS["sidebar"]
+                elif "chat_view" in parent_str or "ide_view" in parent_str:
+                    bg_color = COLORS["panel"]
+                # Check if this is a top bar frame
+                elif "top_bar" in str(widget) or "top_right" in str(widget) or "top_center" in str(widget) or "top_left" in str(widget):
+                    bg_color = COLORS["panel"]
+
+                # Forcefully update frame properties to eliminate any visual artifacts
+                widget.config(
+                    bg=bg_color,
+                    highlightbackground=bg_color,  # Match background to eliminate borders
+                    highlightcolor=bg_color,      # Match background to eliminate borders
+                    highlightthickness=0         # No highlight border
+                )
+            elif isinstance(widget, tk.Canvas):
+                # Update canvas background
+                widget.config(bg=COLORS["panel"])
+            elif isinstance(widget, tk.Checkbutton):
+                # Update checkbutton colors
+                widget.config(
+                    bg=COLORS["panel"],
+                    fg=COLORS["text"],
+                    activebackground=COLORS["panel"],
+                    activeforeground=COLORS["text"],
+                    selectcolor=COLORS["entry_bg"],
+                    highlightbackground=COLORS["panel"]
+                )
+            elif isinstance(widget, tk.Radiobutton):
+                # Update radiobutton colors
+                widget.config(
+                    bg=COLORS["panel"],
+                    fg=COLORS["text"],
+                    activebackground=COLORS["panel"],
+                    activeforeground=COLORS["text"],
+                    selectcolor=COLORS["entry_bg"],
+                    highlightbackground=COLORS["panel"]
+                )
+            elif isinstance(widget, ttk.Combobox):
+                # Update combobox colors based on current theme
+                if CURRENT_THEME == "Light Mode":
+                    # Configure a light theme for combobox
+                    style = ttk.Style()
+                    style.configure(
+                        "Light.TCombobox",
+                        fieldbackground=COLORS["entry_bg"],
+                        background=COLORS["entry_bg"],
+                        foreground=COLORS["text"],
+                        arrowcolor=COLORS["text"],
+                        bordercolor=COLORS["border"],
+                        lightcolor=COLORS["border"],
+                        darkcolor=COLORS["border"],
+                        padding=5,
+                    )
+                    style.map(
+                        "Light.TCombobox",
+                        fieldbackground=[("readonly", COLORS["entry_bg"])],
+                        selectbackground=[("readonly", COLORS["entry_bg"])],
+                        selectforeground=[("readonly", COLORS["text"])],
+                        foreground=[("readonly", COLORS["text"])],
+                        background=[("readonly", COLORS["entry_bg"])],
+                    )
+                    widget.config(style="Light.TCombobox")
+                else:
+                    widget.config(style="Dark.TCombobox")
+            elif isinstance(widget, ttk.Treeview):
+                # Update treeview colors
+                widget.config(
+                    background=COLORS["list_bg"],
+                    foreground=COLORS["text"],
+                    fieldbackground=COLORS["list_bg"]
+                )
+            elif isinstance(widget, ttk.Notebook):
+                # Update notebook colors
+                widget.config(style='Settings.TNotebook')
+            elif isinstance(widget, tk.Menu):
+                # Update menu colors
+                widget.config(
+                    background=COLORS["entry_bg"],
+                    foreground=COLORS["text"],
+                    activebackground=COLORS["button"],
+                    activeforeground=COLORS["text"],
+                    selectcolor=COLORS["text"]
+                )
+        except tk.TclError:
+            # Some widgets might not support certain attributes, skip them
+            pass
+        
+        # Recursively update all children
+        for child in widget.winfo_children():
+            self._update_theme_for_widget(child)
+
+    def _apply_theme_globally(self):
+        """Apply the current theme to all UI elements."""
+        # Update TTK styles
+        self._configure_ttk_styles()
+        
+        # Update the main window background
+        self.configure(bg=COLORS["bg"])
+        
+        # Update all widgets recursively starting from the root
+        for child in self.winfo_children():
+            self._update_theme_for_widget(child)
+        
+        # Update button active background colors after all widgets are updated
+        self._update_button_active_colors()
+    
+    def _update_button_active_colors(self):
+        """Update active background colors for all buttons based on current theme."""
+        active_bg = self._get_active_bg_color()
+        
+        # Update specific buttons that we know exist
+        buttons_to_update = [
+            getattr(self, 'chat_mode_button', None),
+            getattr(self, 'ide_mode_button', None),
+            getattr(self, 'search_button', None),
+            getattr(self, 'export_button', None),
+            getattr(self, 'settings_button', None),
+            getattr(self, 'send_button', None),
+            getattr(self, 'new_chat_button', None),
+            getattr(self, 'run_button', None),
+            getattr(self, 'stop_button', None),
+            getattr(self, 'ask_ai_button', None),
+            getattr(self, 'package_manager_button', None),
+            getattr(self, 'new_agent_chat_button', None),
+            getattr(self, 'agent_run_button', None),
+        ]
+        
+        for button in buttons_to_update:
+            if button and isinstance(button, tk.Button):
+                try:
+                    button.config(activebackground=active_bg)
+                except tk.TclError:
+                    # Ignore if the widget doesn't support the property
+                    pass
 
     def _build_chat_sidebar(self, parent: tk.Frame) -> None:
         """Build the chat sidebar UI section."""
@@ -1256,7 +1612,8 @@ class GroqChatroomApp(tk.Tk):
         self.messages_canvas = tk.Canvas(
             message_container,
             bg=COLORS["panel"],
-            highlightthickness=0,
+            highlightthickness=1,
+            highlightbackground=COLORS["border"],
             bd=0,
         )
         self.messages_canvas.pack(side="left", fill="both", expand=True)
@@ -3268,6 +3625,9 @@ class GroqChatroomApp(tk.Tk):
 
         # Get saved visual settings
         saved_theme = self.settings.get("theme", CURRENT_THEME)
+        # If the saved theme was Light Mode (which we removed), default to Dark Mode
+        if saved_theme == "Light Mode":
+            saved_theme = "Dark Mode"
         saved_font = self.settings.get("font_family", "Segoe UI")
         saved_font_size = self.settings.get("font_size", 10)
         saved_editor_font = self.settings.get("editor_font_family", "Consolas")
@@ -3296,6 +3656,9 @@ class GroqChatroomApp(tk.Tk):
         theme_frame.pack(fill="x", pady=(0, 20))
 
         for theme_name in THEMES.keys():
+            # Skip Light Mode since it's been removed
+            if theme_name == "Light Mode":
+                continue
             tk.Radiobutton(
                 theme_frame,
                 text=theme_name,
@@ -3503,7 +3866,10 @@ class GroqChatroomApp(tk.Tk):
                 show_status=False,
             )
 
-            self.status_var.set("Settings saved - Restart recommended for full effect")
+            # Apply the new theme to all UI elements
+            self._apply_theme_globally()
+
+            self.status_var.set("Settings saved - Theme applied successfully!")
             self._render_current_chat()
             close_dialog()
 
@@ -4411,6 +4777,51 @@ class GroqChatroomApp(tk.Tk):
 
         return text, thought_process
 
+    def _create_rounded_bubble(self, parent, bg_color, fg_color, text, font, justify, wraplength=720, role="assistant"):
+        """Create a bubble with rounded corners using a frame with padding to simulate rounded corners."""
+        # Determine border color based on role
+        border_color = COLORS.get(f"{role}_bubble_border", COLORS["border"])
+        
+        # Create a frame to serve as the bubble container with border for rounded effect
+        bubble_frame = tk.Frame(
+            parent,
+            bg=border_color,
+            relief="flat",
+            borderwidth=1,
+            highlightthickness=0
+        )
+        
+        # Create an inner frame for the actual background color
+        inner_frame = tk.Frame(
+            bubble_frame,
+            bg=bg_color,
+            relief="flat",
+            borderwidth=0,
+            highlightthickness=0
+        )
+        
+        # Create the actual text label inside the inner frame
+        bubble = tk.Label(
+            inner_frame,
+            text=text,
+            wraplength=wraplength,
+            justify=justify,
+            bg=bg_color,
+            fg=fg_color,
+            font=font,
+            padx=16,
+            pady=12,
+            relief="flat",
+            borderwidth=0,
+            highlightthickness=0,
+        )
+        
+        # Pack the elements to create the bordered bubble effect
+        inner_frame.pack(padx=1, pady=1)  # Small padding to create the border effect
+        bubble.pack(padx=2, pady=2)  # Inner padding for the content
+        
+        return bubble_frame, bubble
+
     def _add_message(
         self,
         role: str,
@@ -4441,18 +4852,12 @@ class GroqChatroomApp(tk.Tk):
             bubble_font = ("Segoe UI", 10)
             justify = "center"
 
-        bubble = tk.Label(
-            row,
-            text=text,
-            wraplength=720,
-            justify=justify,
-            bg=bubble_bg,
-            fg=fg,
-            font=bubble_font,
-            padx=14,
-            pady=10,
+        # Create the bubble with rounded corners
+        bubble_frame, bubble = self._create_rounded_bubble(
+            row, bubble_bg, fg, text, bubble_font, justify, role=role
         )
-        bubble.pack(anchor=anchor, padx=padding)
+        
+        bubble_frame.pack(anchor=anchor, padx=padding)
 
         # Extract thought process from the message text
         visible_text, thought_process = self._extract_thought_process(text)
@@ -4466,22 +4871,23 @@ class GroqChatroomApp(tk.Tk):
             meta['thought_process'] = thought_process
             # Store the original visible text for toggling
             meta['original_content'] = visible_text
-        
+
         hover_text = self._build_message_hover_text(role, text, meta or {})
-        for widget in (row, bubble):
+        # Bind events to both the frame and the bubble label
+        for widget in (row, bubble_frame, bubble):
             widget.bind("<Enter>", lambda event, txt=hover_text: self._show_message_hover(event, txt))
             widget.bind("<Motion>", self._move_message_hover)
             widget.bind("<Leave>", self._hide_message_hover)
-            
+
             # Add right-click context menu for showing thought process
             if role == "assistant" and meta and meta.get('thought_process'):
                 original_content = meta.get('original_content', visible_text)
-                widget.bind("<Button-3>", lambda event, b=bubble, tp=meta['thought_process'], oc=original_content: 
+                widget.bind("<Button-3>", lambda event, b=bubble, tp=meta['thought_process'], oc=original_content:
                            self._show_thought_process_context_menu(event, b, tp, oc))
 
         if auto_scroll:
             self.after(30, lambda: self.messages_canvas.yview_moveto(1.0))
-        return row, bubble
+        return row, bubble  # Return the actual bubble label for consistency with other parts of the code
 
     def _get_reasoning_effort(self, is_agent: bool = False) -> int:
         """Get the appropriate reasoning effort level based on context.
@@ -6302,6 +6708,17 @@ class GroqChatroomApp(tk.Tk):
             return {"ok": False, "message": f"path error: {exc}"}
 
         if action == "read":
+            # Check if the requested path is the current editor file
+            if self.ide_current_file and str(path) == str(self.ide_current_file):
+                # Read the content directly from the editor widget
+                try:
+                    content = self.ide_editor.get("1.0", "end-1c")  # Get all text from editor
+                    return {"ok": True, "message": "read from editor", "content": content}
+                except Exception:
+                    # If we can't read from editor, fall back to file system
+                    pass
+            
+            # If not the current editor file or editor read failed, try file system
             if not path.exists() or not path.is_file():
                 return {"ok": False, "message": "file not found"}
             try:
